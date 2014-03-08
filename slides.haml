@@ -1,0 +1,91 @@
+%section{ 'data-background' => 'images/mc-hammer-jdlasica.jpg' }
+  %h1 Stop!
+  %h1.fragment Haml Time!
+
+%section{ 'data-background' => '#007777' }
+  %h1 Background Color
+
+%section
+  %h1 Make Text
+  %h2.fragment.fade-out Disappear
+
+%section
+  %h1 Make Text
+  %h2.fragment.highlight-blue Change Color
+
+%section
+  %pre
+    %code
+      :preserve
+        (defun jw-eval-buffer ()
+          "Evaluate the current buffer and display the result in a buffer."
+          (interactive)
+          (save-buffer)
+          (let* ((file-name (buffer-file-name (current-buffer)))
+                 (file-extension (file-name-extension file-name))
+                 (buffer-eval-command-pair (assoc file-extension jw-eval-buffer-commands)))
+            (if buffer-eval-command-pair
+                (let ((command (concat (cdr buffer-eval-command-pair) " " file-name)))
+                  (shell-command-on-region (point-min) (point-max) command jw-eval-buffer-name nil)
+                  (pop-to-buffer jw-eval-buffer-name)
+                  (other-window 1)
+                  (jw-eval-buffer-pretty-up-errors jw-eval-buffer-name)
+                  (message ".."))
+              (message "Unknown buffer type"))))
+
+%section
+  %pre
+    %code= contents_of('code/eval-buffer.el')
+
+%section
+  %h2
+    Slide Quine, anyone?
+  %pre
+    %code= contents_of('slides.haml')
+
+%section
+  %section
+    %h1 Vertical
+  %section
+    %h1 S
+  %section
+    %h1 SL
+  %section
+    %h1 SLI
+  %section
+    %h1 SLID
+  %section
+    %h1 SLIDE
+  %section
+    %h1 SLIDES!
+
+%section
+  %section
+    %h2 Credits
+  %section
+    %h2 MC Hammer Photo
+    %h3
+      %a{ href: 'http://www.jdlasica.com/' } http://jdlasica.com
+    %h3
+      %a{ href: 'http://www.flickr.com/photos/jdlasica/sets/72157640574674874/' } Start Up Grind on Flickr
+  %section
+    %h2 Code
+    %p
+      %a{ href: 'https://github.com/jimweirich/emacs-setup-esk' } https://github.com/jimweirich/emacs-setup-esk
+    %img{ src: 'images/jim-gravatar.jpeg' }
+
+%section
+  %h1 Remember:
+  %h2 It's just a browser
+  %aside.notes
+    Your presentation runtime is a browser. So.. you can put anything
+    into a presentation that can normally be seen in a browser.
+
+%section
+  %img{ 'src' => 'images/tom-brady-high-five-fail.gif' }
+
+%section{ 'data-background' => 'images/tom-brady-high-five-fail.gif' }
+
+%section
+  %h1
+    Thanks!
