@@ -47,4 +47,4 @@ If you have questions about haml, check out http://haml.info/.
 
 [reveal-ck]: https://github.com/jedcn/reveal-ck
 [reveal-ck-wiki]: https://github.com/jedcn/reveal-ck/wiki
-[Rakefile]: ./blob/master/Rakefile
+[Rakefile]: ./Rakefile
