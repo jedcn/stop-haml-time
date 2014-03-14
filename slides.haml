@@ -1,9 +1,13 @@
 %section{ 'data-background' => 'images/mc-hammer-jdlasica.jpg' }
   %h1 Stop!
-  %h1.fragment Haml Time!
+  %h1 Haml Time!
 
 %section{ 'data-background' => '#007777' }
   %h1 Background Color
+
+%section
+  %h1 Make Text
+  %h2.fragment Appear
 
 %section
   %h1 Make Text
@@ -14,6 +18,8 @@
   %h2.fragment.highlight-blue Change Color
 
 %section
+  %h2
+    Code Inline
   %pre
     %code
       :preserve
@@ -34,6 +40,8 @@
               (message "Unknown buffer type"))))
 
 %section
+  %h2
+    Code from File
   %pre
     %code= contents_of('code/eval-buffer.el')
 
@@ -73,6 +81,10 @@
     %p
       %a{ href: 'https://github.com/jimweirich/emacs-setup-esk' } https://github.com/jimweirich/emacs-setup-esk
     %img{ src: 'images/jim-gravatar.jpeg' }
+
+%section
+  %h1 Source
+  %a{ href: 'https://github.com/jedcn/stop-haml-time' } https://github.com/jedcn/stop-haml-time
 
 %section
   %h1 Remember:
