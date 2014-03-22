@@ -16,7 +16,6 @@ end
 #
 task :get_images => [
                      'images/mc-hammer-jdlasica.jpg',
-                     'images/jim-gravatar.jpeg',
                      'images/tom-brady-high-five-fail.gif'
                     ]
 
@@ -48,14 +47,6 @@ file 'images/mc-hammer-jdlasica.jpg' => 'images' do
   #
   `wget http://farm8.staticflickr.com/7293/12338376683_7397b563da_o.jpg`
   mv '12338376683_7397b563da_o.jpg', 'images/mc-hammer-jdlasica.jpg'
-end
-
-file 'images/jim-gravatar.jpeg' => 'images' do
-  #
-  # This is straight from Jim's Gravatar setup on Github
-  #
-  `wget https://0.gravatar.com/avatar/b2e519cf5d98262296c37f3d01cb1cf0?s=280`
-  mv 'b2e519cf5d98262296c37f3d01cb1cf0?s=280', 'images/jim-gravatar.jpeg'
 end
 
 file 'images/tom-brady-high-five-fail.gif' => 'images' do
