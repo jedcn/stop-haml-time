@@ -1,6 +1,16 @@
+- flickr_set = 'http://www.flickr.com/photos/jdlasica/sets/72157640574674874/'
+
 %section{ 'data-background' => 'images/mc-hammer-jdlasica.jpg' }
   %h1 Stop!
   %h1 Haml Time!
+  %aside.notes
+    This is a photo of MC Hammer. This photo was taken by
+    jdlasica. See more photos like this one on his
+    %a{ 'href' => flickr_set } StartUp Grind Set on Flickr
+
+%section
+  %h1 Source
+  %a{ href: 'https://github.com/jedcn/stop-haml-time' } https://github.com/jedcn/stop-haml-time
 
 %section{ 'data-background' => '#007777' }
   %h1 Background Color
@@ -46,12 +56,6 @@
     %code= contents_of('code/eval-buffer.el')
 
 %section
-  %h2
-    Slide Quine, anyone?
-  %pre
-    %code= contents_of('slides.haml')
-
-%section
   %section
     %h1 Vertical
   %section
@@ -68,30 +72,8 @@
     %h1 SLIDES!
 
 %section
-  %section
-    %h2 Credits
-  %section
-    %h2 MC Hammer Photo
-    %h3
-      %a{ href: 'http://www.jdlasica.com/' } http://jdlasica.com
-    %h3
-      %a{ href: 'http://www.flickr.com/photos/jdlasica/sets/72157640574674874/' } Start Up Grind on Flickr
-  %section
-    %h2 Code
-    %p
-      %a{ href: 'https://github.com/jimweirich/emacs-setup-esk' } https://github.com/jimweirich/emacs-setup-esk
-    %img{ src: 'images/jim-gravatar.jpeg' }
-
-%section
-  %h1 Source
-  %a{ href: 'https://github.com/jedcn/stop-haml-time' } https://github.com/jedcn/stop-haml-time
-
-%section
   %h1 Remember:
   %h2 It's just a browser
-  %aside.notes
-    Your presentation runtime is a browser. So.. you can put anything
-    into a presentation that can normally be seen in a browser.
 
 %section
   %img{ 'src' => 'images/tom-brady-high-five-fail.gif' }
