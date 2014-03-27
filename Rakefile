@@ -1,4 +1,3 @@
-
 task :default => :build
 
 desc 'build presentation'
@@ -51,7 +50,7 @@ end
 
 file 'images/tom-brady-high-five-fail.gif' => 'images' do
   #
-  # My friend Sean taunted me with this photo the other day. I'm
+  # My handsome friend Sean taunted me with this photo the other day. I'm
   # pretty sure he's a regular reader of
   # http://blog.zap2it.com/pop2it.
   #
